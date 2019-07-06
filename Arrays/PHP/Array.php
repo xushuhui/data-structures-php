@@ -45,4 +45,18 @@ class myarray
     {
         $this->add(0,$e);
     }
+    public function get($index)
+    {
+        if($index <0 || $index > $this->size){
+            throw new Exception("AddLast failed. Array is full");
+        }
+        return $this->data[$index];
+    }
+    public function set($index,$e)
+    {
+        if($index <0 || $index > $this->size){
+            throw new Exception("AddLast failed. Array is full");
+        }
+        $this->data[$index] = $e;
+    }
 }   

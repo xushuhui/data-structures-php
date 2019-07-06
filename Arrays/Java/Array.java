@@ -48,5 +48,17 @@ public class Array {
     @Override
     public String toString(){
     }
-
+    
+    int get (int index){
+       if (index < 0 || index > size) {
+            throw new IllegalArgumentException("AddLast failed. Array is full.");
+        }
+        return data[index]
+    }
+    void set(int index,int e){
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("AddLast failed. Array is full.");
+        }
+        data[index] = e;
+    }
 }
