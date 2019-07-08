@@ -1,9 +1,9 @@
-public class Array {
-    private int[] data;
+public class Array<E>{
+    private E[] data;
     private int size;
 
     public Array(int capacity) {
-        data = new int[capacity];
+        data = (E[])new Object[capacity];
         size = 0
     }
 
@@ -23,7 +23,7 @@ public class Array {
         return size == 0
     }
 
-    public void add(int index, int e) {
+    public void add(int index, E e) {
         if (size == data.length) {
             throw new IllegalArgumentException("AddLast failed. Array is full.");
         }
@@ -37,11 +37,11 @@ public class Array {
         size++
     }
 
-    public void addLast(int e) {
+    public void addLast(E e) {
         add(size, e);
     }
 
-    public void addFirst(int e) {
+    public void addFirst(E e) {
         add(0, e);
     }
 
@@ -49,31 +49,31 @@ public class Array {
     public String toString(){
     }
     
-    public int get (int index){
+    public E get (int index){
        if (index < 0 || index > size) {
             throw new IllegalArgumentException("index is illegal.");
         }
         return data[index]
     }
-    public void set(int index,int e){
+    public void set(int index,E e){
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("index is illegal.");
         }
         data[index] = e;
     }
     //是否包含元素
-    public bool contains(int e){
+    public boolean contains(E e){
         for(int i=0;i<size;i++){
-            if(data[i] == e){
+            if(data[i].equals(e)){
                 return true;
             }
         }
         return false;
     }
     //查找元素位置
-    public int find(int e){
+    public int find(E e){
         for(int i=0;i<size;i++){
-            if(data[i] == e){
+            if((data[i].equals(e)){
                 return i;
             }
         }
@@ -84,20 +84,21 @@ public class Array {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("index is illegal.");
         }
-        int ret = data[index];
+        E ret = data[index];
          for (int i = size + 1; i < index,i++){
             data[i - 1] = data[i];
         }
         size --;
+        data[size] = null;
         return ret;
     }
-    public int removeFirst(){
+    public E removeFirst(){
         return remove(0);
     }
-    public int removeLast(){
+    public E removeLast(){
         return remove(size-1);
     }
-    public void removeElement(int e){
+    public void removeElement(E e){
         int index = find(e);
         if(index != -1){
             remove(index)
