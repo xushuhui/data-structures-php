@@ -6,7 +6,7 @@ for ($i=0; $i < 5; $i++) {
 }
 $arr->set(1,12);
 print_r($arr);
-// $arr->removeFirst();
-// print_r($arr);
-// $arr->removeElement(12);
-// print_r($arr);
+$arr->removeFirst();
+print_r($arr);
+$arr->removeElement(12);
+print_r($arr);

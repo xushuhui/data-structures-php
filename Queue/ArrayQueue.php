@@ -14,12 +14,12 @@ class ArrayQueue implements Queue
         return $this->array->isEmpty();
     }
     public function enqueue($e){
-
+        $this->array->addLast($e);
     }
     public function dequeue(){
-
+        return $this->array->removeFirst();
     }
     public function getFront(){
-
+        return $this->array->getFirst();
     }
 }

@@ -58,6 +58,12 @@ class arrays
         }
         return $this->data[$index];
     }
+    public function getLast(){
+        return $this->get($this->size-1);
+    }
+    public function getFirst(){
+        return $this->get(0);
+    }
     //O(1)
     public function set($index,$e)
     {
