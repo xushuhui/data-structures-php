@@ -1,5 +1,5 @@
 <?php
-class myarray
+class arrays
 {
     private $data = [];
     private $size;
@@ -10,15 +10,15 @@ class myarray
         $this->capacity = $capacity;
         $this->size = 0;
     }
-    public function getSize()
+    public function getSize():int
     {
         return $this->size;
     }
-    public function isEmpty()
+    public function isEmpty():bool
     {
         return $this->size == 0;
     }
-    public function getCapacity()
+    public function getCapacity():int
     {
         return $this->capacity;
     }
@@ -58,6 +58,12 @@ class myarray
         }
         return $this->data[$index];
     }
+    public function getLast(){
+        return $this->get($this->size-1);
+    }
+    public function getFirst(){
+        return $this->get(0);
+    }
     //O(1)
     public function set($index,$e)
     {
@@ -67,7 +73,7 @@ class myarray
         $this->data[$index] = $e;
     }
     //O(n)
-    public function contains($e)
+    public function contains($e):bool
     {
         for ($i=0; $i < $this->size; $i++) { 
             if($this->data[$i] == $e){
@@ -77,7 +83,7 @@ class myarray
         return false;
     }
     //O(n)
-    public function find($e)
+    public function find($e):int
     {
         for ($i=0; $i < $this->size; $i++) { 
             if($this->data[$i] == $e){

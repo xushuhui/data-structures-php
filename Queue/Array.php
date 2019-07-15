@@ -1,5 +1,5 @@
 <?php
-class myarray
+class arrays
 {
     private $data = [];
     private $size;
