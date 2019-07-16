@@ -25,4 +25,18 @@ class ArrayStack implements Stack
     public function peek(){
         return  $this->array->getLast();
     }
+    public function dump()
+    {
+       
+        $str="\nStack: [";
+        for($i = 0 ; $i < $this->getSize(); $i ++){
+            $str.= $i;
+            if($i != $this->getSize() - 1){
+                $str.= ", ";
+            }
+            
+        }
+        $str.="]  top";
+        echo $str;
+    }
 }

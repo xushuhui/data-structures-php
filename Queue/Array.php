@@ -133,4 +133,18 @@ class arrays
         $this->data = $newData;
         $this->capacity = $newCapacity;
     }
+    public function dump()
+    {
+        $str = sprintf("\nArray: size = %d , capacity = %d\n",$this->size,$this->capacity);
+        $str.='[';
+        for($i = 0 ; $i < $this->size; $i ++){
+            $str.= $i;
+            if($i != $this->size - 1){
+                $str.= ", ";
+            }
+            
+        }
+        $str.="]";
+        echo $str;
+    }
 }   
