@@ -1,10 +1,21 @@
 <?php
-include "ArrayQueue.php";
-$queue = new ArrayQueue();
-for ($i=0; $i < 5; $i++) { 
+//include "ArrayQueue.php";
+
+// $queue = new ArrayQueue();
+// for ($i=1; $i < 5; $i++) { 
+//     $queue->enqueue($i);
+// }
+// $queue->dump();
+// $queue->dequeue();
+// $queue->dump();
+// print_r($queue->getFront());
+include "LoopQueue.php";
+$queue = new LoopQueue();
+for ($i=1; $i < 5; $i++) { 
     $queue->enqueue($i);
 }
-print_r($queue);
+$queue->dump();
 $queue->dequeue();
-print_r($queue);
-print_r($queue->getFront());
+$queue->dump();
+$queue->enqueue(10);
+$queue->dump();

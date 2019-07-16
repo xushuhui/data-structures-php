@@ -22,4 +22,17 @@ class ArrayQueue implements Queue
     public function getFront(){
         return $this->array->getFirst();
     }
+    public function dump()
+    {
+        $str="\nQueue front [";
+        for($i = 0 ; $i < $this->getSize(); $i ++){
+            $str.= $this->array->get($i);
+            if($i != $this->getSize() - 1){
+                $str.= ", ";
+            }
+            
+        }
+        $str.="] tail";
+        echo $str;
+    }
 }

@@ -27,10 +27,9 @@ class ArrayStack implements Stack
     }
     public function dump()
     {
-       
         $str="\nStack: [";
         for($i = 0 ; $i < $this->getSize(); $i ++){
-            $str.= $i;
+            $str.= $this->array->get($i);
             if($i != $this->getSize() - 1){
                 $str.= ", ";
             }
