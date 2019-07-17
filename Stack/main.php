@@ -6,6 +6,6 @@ $stock = new ArrayStack();
 for ($i=1; $i < 5; $i++) { 
     $stock->push($i);
 }
-$stock->dump();
+echo $stock;
 $stock->pop();
-$stock->dump();
+echo $stock;

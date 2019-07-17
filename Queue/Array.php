@@ -133,7 +133,7 @@ class arrays
         $this->data = $newData;
         $this->capacity = $newCapacity;
     }
-    public function dump()
+    public function __toString()
     {
         $str = sprintf("\nArray: size = %d , capacity = %d\n",$this->size,$this->getCapacity());
         $str.='[';
@@ -144,6 +144,6 @@ class arrays
             }
         }
         $str.="]";
-        echo $str;
+        return $str;
     }
 }   

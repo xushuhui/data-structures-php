@@ -32,17 +32,17 @@ main::mainQueue();
 // for ($i=1; $i < 5; $i++) { 
 //     $queue->enqueue($i);
 // }
-// $queue->dump();
+// echo $queue;
 // $queue->dequeue();
-// $queue->dump();
+//  echo $queue;
 // print_r($queue->getFront());
 
 // $queue = new LoopQueue(3);
 // for ($i=1; $i < 10; $i++) { 
 //     $queue->enqueue($i);
 // }
-// $queue->dump();
+//  echo $queue;
 // $queue->dequeue();
-// $queue->dump();
+//  echo $queue;
 // $queue->enqueue(10);
-// $queue->dump();
+//  echo $queue;

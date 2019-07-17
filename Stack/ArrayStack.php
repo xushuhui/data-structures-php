@@ -25,7 +25,7 @@ class ArrayStack implements Stack
     public function peek(){
         return  $this->array->getLast();
     }
-    public function dump()
+    public function __toString()
     {
         $str="\nStack: [";
         for($i = 0 ; $i < $this->getSize(); $i ++){
@@ -36,6 +36,6 @@ class ArrayStack implements Stack
             
         }
         $str.="]  top";
-        echo $str;
+        return $str;
     }
 }

@@ -19,5 +19,5 @@
 *.tar.gz
 *.rar
 
-.idea
+.idea/
 go.mod

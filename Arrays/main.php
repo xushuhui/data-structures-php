@@ -1,13 +1,13 @@
 <?php
 include "Array.php";
 $arr = new arrays(3);
-$arr->dump();
+echo $arr;
 for ($i=0; $i < 15; $i++) { 
     $arr->addLast($i);
 }
 $arr->set(1,12);
-$arr->dump();
+echo $arr;
 $arr->removeFirst();
-$arr->dump();
+echo $arr;
 $arr->removeElement(12);
-$arr->dump();
+echo $arr;

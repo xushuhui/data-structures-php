@@ -67,7 +67,7 @@ class LoopQueue implements Queue
      
     }
 
-    public function dump()
+    public function __toString()
     {
         $str = sprintf("\nQueue: size = %d , capacity = %d\n",$this->size,$this->getCapacity());
         $str.='front [';
@@ -79,6 +79,6 @@ class LoopQueue implements Queue
             
         }
         $str.="] tail";
-        echo $str;
+        return $str;
     }
 }
