@@ -1,9 +1,9 @@
 <?php
 class Node{
-    public $element;
+    public $e;
     public $next;
-    public function __construct($element = null,$next=null){
-        $this->element = $element;
+    public function __construct($e = null,$next=null){
+        $this->e = $e;
         $this->next = $next;
     }
     

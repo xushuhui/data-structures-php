@@ -1,6 +1,6 @@
 <?php
-include "Array.php";
-$arr = new arrays(3);
+include_once "Arrays.php";
+$arr = new Arrays(3);
 echo $arr;
 for ($i=0; $i < 15; $i++) { 
     $arr->addLast($i);

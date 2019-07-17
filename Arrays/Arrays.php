@@ -1,5 +1,6 @@
 <?php
-class arrays
+
+class Arrays
 {
     private $data;
     private $size;
