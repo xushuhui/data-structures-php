@@ -1,6 +1,6 @@
 <?php
-include "Queue.php";
-include "Array.php";
+include_once "Queue.php";
+include_once "Array.php";
 class LoopQueue implements Queue
 {
     private $data = [];
@@ -27,7 +27,7 @@ class LoopQueue implements Queue
     public function enqueue($e)
     {
         if(($this->tail + 1) % $this->capacity == $this->front){
-
+            $this->resize($this->getCapacity() * 2);
         }
         $this->data[$this->tail] = $e;
         $this->tail = ($this->tail + 1) % $this->capacity;
@@ -43,7 +43,7 @@ class LoopQueue implements Queue
         $this->front = ($this->front + 1) % $this->capacity;
         $this->size --;
         if($this->size == $this->getCapacity() / 4 && $this->getCapacity() / 2 != 0){
-            //resize(getCapacity() / 2);
+            $this->resize(getCapacity() / 2);
         }
             
         return $ret;
@@ -55,6 +55,18 @@ class LoopQueue implements Queue
         }
         return $this->data[$this->front];
     }
+    private function resize( $newCapacity){
+        $newData = (new self($newCapacity+1))->data;
+        for($i=0;$i<$this->size;$i++){
+            $newData[$i] = $this->data[($i+$this->front)%$this->capacity];
+        }
+        $this->data = $newData;
+        $this->capacity = $newCapacity;
+        $this->front = 0;
+        $this->tail = $this->size;
+     
+    }
+
     public function dump()
     {
         $str = sprintf("\nQueue: size = %d , capacity = %d\n",$this->size,$this->getCapacity());

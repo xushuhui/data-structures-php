@@ -1,12 +1,12 @@
 <?php
 class arrays
 {
-    private $data = [];
+    private $data;
     private $size;
     private $capacity;
     public function __construct(int $capacity = 10)
     {
-        $this->data = [];
+        $this->data = new SplFixedArray($capacity);
         $this->capacity = $capacity;
         $this->size = 0;
     }
@@ -20,7 +20,7 @@ class arrays
     }
     public function getCapacity():int
     {
-        return $this->capacity;
+        return $this->data->getSize();
     }
     //O(n)
     public function add(int $index,int $e)
@@ -135,14 +135,13 @@ class arrays
     }
     public function dump()
     {
-        $str = sprintf("\nArray: size = %d , capacity = %d\n",$this->size,$this->capacity);
+        $str = sprintf("\nArray: size = %d , capacity = %d\n",$this->size,$this->getCapacity());
         $str.='[';
         for($i = 0 ; $i < $this->size; $i ++){
             $str.= $i;
             if($i != $this->size - 1){
                 $str.= ", ";
             }
-            
         }
         $str.="]";
         echo $str;

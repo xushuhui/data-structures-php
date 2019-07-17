@@ -1,6 +1,6 @@
 <?php
-include "Queue.php";
-include "Array.php";
+include_once "Queue.php";
+include_once "Array.php";
 class ArrayQueue implements Queue
 {
     private $array;
@@ -30,7 +30,6 @@ class ArrayQueue implements Queue
             if($i != $this->getSize() - 1){
                 $str.= ", ";
             }
-            
         }
         $str.="] tail";
         echo $str;
