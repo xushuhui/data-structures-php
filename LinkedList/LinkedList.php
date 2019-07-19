@@ -92,6 +92,18 @@ class LinkedList{
         
     }
     public function __toString(){
-        
+        $cur = $this->dummyHead->next;
+        $res = '';
+        //第一种写法
+        while($cur != null){
+            $res.=$cur.'->';
+            $cur = $cur->next;
+        }
+        //第二种
+        // for ($cur=$this->dummyHead->next; $cur != null; $cur=$cur->next) { 
+        //     $res .= $cur.'->';
+        // }
+        $res.="NULL\n";
+        return $res;
     }
 }

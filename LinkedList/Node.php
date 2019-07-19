@@ -13,5 +13,5 @@ class Node{
         $this->e = $e;
         $this->next = $next;
     }
-    
+
 }
