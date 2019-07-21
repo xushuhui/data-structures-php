@@ -81,12 +81,19 @@ class LinkedList{
         if($index <0 || $index > $this->size){
             throw new Exception("index is illegal");
         }
+        $prev = $this->dummyHead;
+        for ($i=0; $i < $index; $i++) { 
+            $prev= $prev->next;
+        }
+        $retNode = $prev->next;
+        $prev->next = $retNode->next；
+        $retNode->next = null;
+        $this->size--;
     }
     public function removeLast(){
-        
-    }
+        $this->remove($this->size-1);
     public function removeFirst(){
-        
+        $this->remove(0)
     }
     public function removeElement($e){
         
