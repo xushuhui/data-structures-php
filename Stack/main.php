@@ -6,13 +6,21 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-include "ArrayStack.php";
+include_once "ArrayStack.php";
+include_once "LinkedListStack.php";
+$arrayStock = new ArrayStack();
+for ($i=1; $i < 5; $i++) { 
+    $arrayStock->push($i);
+}
+echo $arrayStock;
+$arrayStock->pop();
+echo $arrayStock;
 
-$stock = new ArrayStack();
+$linkedListStock = new LinkedListStack();
 
 for ($i=1; $i < 5; $i++) { 
-    $stock->push($i);
+    $linkedListStock->push($i);
 }
-echo $stock;
-$stock->pop();
-echo $stock;
+echo $linkedListStock;
+$linkedListStock->pop();
+echo $linkedListStock;

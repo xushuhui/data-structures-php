@@ -1,4 +1,11 @@
 <?php
+/**
+ * Copyright (c) 2019 - xushuhui
+ * Author: xushuhui
+ * 微信公众号: 互联网工程师
+ * Email: xushuhui@qq.com
+ * 博客: https://www.phpst.cn
+ */
 include_once "LinkedList.php";
 class LinkedListStack  implements Stack
 {
@@ -20,5 +27,11 @@ class LinkedListStack  implements Stack
     }
     public function peek(){
         return $this->list->getFirst();
+    }
+    public function __toString()
+    {
+        $str="\nStack: top ";
+        $str.=$this->list;
+        return $str;
     }
 }
