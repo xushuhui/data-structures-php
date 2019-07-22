@@ -86,14 +86,15 @@ class LinkedList{
             $prev= $prev->next;
         }
         $retNode = $prev->next;
-        $prev->next = $retNode->next；
+        $prev->next = $retNode->next;
         $retNode->next = null;
         $this->size--;
     }
     public function removeLast(){
         $this->remove($this->size-1);
+    }
     public function removeFirst(){
-        $this->remove(0)
+        $this->remove(0);
     }
     public function removeElement($e){
         
