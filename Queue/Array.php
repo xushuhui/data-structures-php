@@ -36,7 +36,6 @@ class arrays
         if($index <0 || $index > $this->size){
             throw new Exception("index is illegal");
         }
-       
         if ($this->size == $this->capacity){
             $this->resize(2 * $this->capacity);
         }

@@ -13,7 +13,7 @@ for ($i=1; $i < 5; $i++) {
    
 }
 $link->set(2,6666);
-print_r ($link);
+echo ($link);
 // $link->addFirst(1);
 
 // $link->addFirst(2);

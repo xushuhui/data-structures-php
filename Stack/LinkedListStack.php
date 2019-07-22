@@ -1,4 +1,5 @@
 <?php
+include_once "LinkedList.php";
 class LinkedListStack  implements Stack
 {
     private $list;
