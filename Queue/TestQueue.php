@@ -8,6 +8,7 @@
  */
 include_once "ArrayQueue.php";
 include_once "LoopQueue.php";
+include_once "LinkedListQueue.php";
 class TestQueue
 {
     public static function test($queue,$count){
@@ -29,10 +30,11 @@ class TestQueue
         
         $loopqueue = new LoopQueue();
         $t2 = self::test($loopqueue,$count);
-        print_r("tl---".$t1);
-        print_r("t2---".$t2);
-        echo "\n";
-        print_r($t1/$t2);
+        $linkedListQueue = new LinkedListQueue();
+        $t3 = self::test($linkedListQueue,$count);
+        echo("\ntl---".$t1);
+        echo("\nt2---".$t2);
+        echo("\nt2---".$t3);
     }
 }
 TestQueue::mainQueue();

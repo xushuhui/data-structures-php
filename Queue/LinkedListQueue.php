@@ -32,4 +32,45 @@ class LinkedListQueue implements Queue
     public function getSize(){
         return $this->size;
     }
+    public function enqueue($e){
+        if(is_null($this->tail)){
+            $this->tail = new Node($e);
+            $this->head = $this->tail;
+        }else{
+            $this->tail->next = new Node($e);
+            $this->tail = $this->tail->next;
+        }
+        $this->size ++ ;
+    }
+    public function dequeue(){
+        if($this->isEmpty()){
+            throw new Exception("Queue is empty");
+        }
+        $retNode = $this->head;
+        $this->head= $this->head->next;
+        $retNode->next = null;
+        if($this->head == null){
+            $this->tail = null;
+        }
+        $this->size--;
+        return $retNode->e;
+    }
+    public function getFront(){
+        if($this->isEmpty()){
+            throw new Exception("Queue is empty");
+        }
+        return $this->head->e;
+    }
+    public function __toString(){
+        $cur = $this->head;
+        $res = 'Queue: front ';
+        //第一种写法
+        while($cur != null){
+            $res.=$cur.'->';
+            $cur = $cur->next;
+        }
+      
+        $res.="NULL tail \n";
+        return $res;
+    }
 }

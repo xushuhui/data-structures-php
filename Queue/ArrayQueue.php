@@ -24,6 +24,9 @@ class ArrayQueue implements Queue
         $this->array->addLast($e);
     }
     public function dequeue(){
+        if($this->isEmpty()){
+            throw new Exception("Queue is empty");
+        }
         return $this->array->removeFirst();
     }
     public function getFront(){
