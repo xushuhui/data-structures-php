@@ -8,7 +8,7 @@
 - [x] 链表 （Linked List）
 - [x] 链表队列 （Linked List Queue）
 - [x] 链表栈 （Linked List Stack）
-- [ ] 二分搜索树 （Binary Search Tree）
+- [x] 二分搜索树 （Binary Search Tree）
 - [ ] 堆
 - [ ] 线段树
 - [ ] Trie
