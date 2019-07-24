@@ -47,30 +47,58 @@ class BST{
             return true;
         }
     }
-    //前置遍历
+    // 二分搜索树的前序遍历
     public function preOrder(){
         $this->preOrderNode($this->root);
     }
+    // 前序遍历以node为根的二分搜索树, 递归算法
     private function preOrderNode($node){
         if ($node == null){
             return;
         }
+        echo $node->e;
         $this->preOrderNode($node->left);
         $this->preOrderNode($node->right);
     }
+     // 二分搜索树的中序遍历
+     public function inOrder(){
+        $this->inOrderNode($this->root);
+    }
+    // 中序遍历以node为根的二分搜索树, 递归算法
+    private function inOrderNode($node){
+        if ($node == null){
+            return;
+        }
+        $this->inOrderNode($node->left);
+        echo $node->e;
+        $this->inOrderNode($node->right);
+    }
+      // 二分搜索树的后序遍历
+    public function postOrder(){
+        $this->postOrderNode($this->root);
+    }
+
+    // 后序遍历以node为根的二分搜索树, 递归算法
+    private function postOrderNode($node){
+        if ($node == null){
+            return;
+        }
+        $this->postOrderNode($node->left);
+        $this->postOrderNode($node->right);
+        echo $node->e;
+    }
     public function __toString(){
-        
         $this->generateBSTString($this->root,0,static::$res);
         return static::$res;
     }
-    private function generateBSTString($node,int $depth,$res){
+    private function generateBSTString($node,int $depth){
         if ($node == null){
-            return $res.$this->generateDepthString($depth."null\n");
+             static::$res.=$this->generateDepthString($depth)."null\n";
+             return;
         }
         static::$res.=$this->generateDepthString($depth).$node->e."\n";
-        $this->generateBSTString($node->left,$depth+1, static::$res);
-        $this->generateBSTString($node->right,$depth+1, static::$res);
-       
+        $this->generateBSTString($node->left,$depth+1);
+        $this->generateBSTString($node->right,$depth+1);
     }
     private function generateDepthString($depth){
         $restr = '';

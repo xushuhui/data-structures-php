@@ -22,4 +22,8 @@ foreach ($nums as $v) {
 /////////////////
 
 $BST->preOrder();
- echo $BST;
+echo "\n";
+$BST->inOrder();
+echo "\n";
+$BST->postOrder();
+// echo $BST;
