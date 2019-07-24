@@ -12,6 +12,7 @@ class Node{
 class BST{
     private $root;
     private $size;
+    static $res;
     public function __construct(){
         $this->root = null;
         $this->size = 0;
@@ -45,6 +46,37 @@ class BST{
         }else{
             return true;
         }
+    }
+    //前置遍历
+    public function preOrder(){
+        $this->preOrderNode($this->root);
+    }
+    private function preOrderNode($node){
+        if ($node == null){
+            return;
+        }
+        $this->preOrderNode($node->left);
+        $this->preOrderNode($node->right);
+    }
+    public function __toString(){
+        
+        $this->generateBSTString($this->root,0,static::$res);
+        return static::$res;
+    }
+    private function generateBSTString($node,int $depth,$res){
+        if ($node == null){
+            return $res.$this->generateDepthString($depth."null\n");
+        }
+        static::$res.=$this->generateDepthString($depth).$node->e."\n";
+        $this->generateBSTString($node->left,$depth+1, static::$res);
+        $this->generateBSTString($node->right,$depth+1, static::$res);
        
+    }
+    private function generateDepthString($depth){
+        $restr = '';
+        for ($i=0; $i < $depth; $i++) { 
+            $restr.='--';
+        }
+        return $restr;
     }
 }
