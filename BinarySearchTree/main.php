@@ -28,5 +28,11 @@ foreach ($nums as $v) {
 // $BST->postOrder();
 // echo "\n";
 //$BST->levelOrder();
-$BST->preOrderNR();
+// $BST->preOrderNR();
 // echo $BST;
+// echo $BST->minimum();
+// echo $BST->removeMin();
+// echo $BST->minimum();
+// echo $BST->maximum();
+// $BST->removeMax();
+// echo $BST->maximum();

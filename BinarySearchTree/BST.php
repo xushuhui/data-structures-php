@@ -152,11 +152,11 @@ class BST
         return $minNode->e;
     }
     // 返回以node为根的二分搜索树的最小值所在的节点
-    public function minimumNode($node){
+    private function minimumNode($node){
         if($node->left == null){
             return $node;
         }
-        return $this->minimumNode($node);
+        return $this->minimumNode($node->left);
     }
     // 寻找二分搜索树的最大元素
     public function maximum(){
@@ -167,11 +167,65 @@ class BST
         return $maxNode->e;
     }
     // 返回以node为根的二分搜索树的最大值所在的节点
-    public function maximumNode($node){
+    private function maximumNode($node){
         if($node->right == null){
             return $node;
         }
-        return $this->maximumNode($node);
+        return $this->maximumNode($node->right);
+    }
+    // 从二分搜索树中删除最小值所在节点, 返回最小值
+    public function removeMin(){
+        $ret = $this->minimum();
+        $this->root = $this->removeMinNode($this->root);
+        return $ret;
+    }
+    // 删除掉以node为根的二分搜索树中的最小节点
+    // 返回删除节点后新的二分搜索树的根
+    public function removeMinNode($node){
+        if($node->left == null){
+            $rightNode = $node->right;
+            $node->right = null;
+            $this->size -- ;
+            return $rightNode;
+        }
+        $node->left = $this->removeMinNode($node->left);
+        return $node;
+    }
+     // 从二分搜索树中删除最大值所在节点
+    public function removeMax(){
+        $ret = $this->maximum();
+        $this->root = $this->removeMaxNode($this->root);
+        return $ret;
+    }
+    // 删除掉以node为根的二分搜索树中的最大节点
+    // 返回删除节点后新的二分搜索树的根
+    public function removeMaxNode($node){
+        if($node->right == null){
+            $leftNode = $node->left;
+            $node->left = null;
+            $this->size--;
+            return $leftNode;
+        }
+        $node->right = $this->removeMaxNode($node->right);
+        return $node;
+    }
+    // 从二分搜索树中删除元素为e的节点
+    public function remove($e){
+        $this->root = $this->removeNode($this->root,$e);
+    }
+     // 删除掉以node为根的二分搜索树中值为e的节点, 递归算法
+    // 返回删除节点后新的二分搜索树的根
+    private function removeNode($node,$e){
+        if($node == null){
+            return null;
+        }
+        if($e < $node->e){
+            $node->left = $this->removeNode($node->left,$e);
+        }elseif ($e > $node->e) {
+            $node->right = $this->removeNode($node->right, $e);
+        }else{//$e == $node->e
+
+        }
     }
     public function __toString()
     {
