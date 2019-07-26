@@ -9,16 +9,16 @@
 
 include_once "BST.php";
 $BST = new BST();
-$nums = [5,3,6,8,4,2];
+$nums = [5,3,7,4,2,6,8];
 foreach ($nums as $v) {
     $BST->add($v);
 }
 /////////////////
 //      5      //
 //    /   \    //
-//   3    6    //
-//  / \    \   //
-// 2  4     8  //
+//   3    7   //
+//  / \  / \   //
+// 2  4 6  8  //
 /////////////////
 
 // $BST->preOrder();
@@ -36,3 +36,10 @@ foreach ($nums as $v) {
 // echo $BST->maximum();
 // $BST->removeMax();
 // echo $BST->maximum();
+// echo $BST;
+$BST->remove(7);
+
+echo "\n";
+// $BST->preOrder();
+// echo "\n";
+echo $BST;

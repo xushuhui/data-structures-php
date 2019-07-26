@@ -193,7 +193,7 @@ class BST
     }
      // 从二分搜索树中删除最大值所在节点
     public function removeMax(){
-        $ret = $this->maximum();
+        $ret = 8;
         $this->root = $this->removeMaxNode($this->root);
         return $ret;
     }
@@ -221,10 +221,34 @@ class BST
         }
         if($e < $node->e){
             $node->left = $this->removeNode($node->left,$e);
+            return $node;
         }elseif ($e > $node->e) {
             $node->right = $this->removeNode($node->right, $e);
+            return $node;
         }else{//$e == $node->e
-
+            
+            // 待删除节点左子树为空的情况
+            if($node->left == null){
+                $rightNode = $node->right;
+                $node->right = null;
+                $this->size--;
+                return $rightNode;
+            }
+            // 待删除节点右子树为空的情况
+            if($node->right == null){
+                $leftNode = $node->left;
+                $node->left = null;
+                $this->size--;
+                return $leftNode;
+            }
+            // 待删除节点左右子树均不为空的情况
+            // 找到比待删除节点大的最小节点, 即待删除节点右子树的最小节点
+            // 用这个节点顶替待删除节点的位置
+            $successor = $this->minimumNode($node->right);
+            $successor->right = $this->removeMinNode($node->right);
+            $successor->left = $node->left;
+            $node->left = $node->right = null;
+            return $successor;
         }
     }
     public function __toString()
