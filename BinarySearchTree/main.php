@@ -21,9 +21,12 @@ foreach ($nums as $v) {
 // 2  4     8  //
 /////////////////
 
-$BST->preOrder();
-echo "\n";
-$BST->inOrder();
-echo "\n";
-$BST->postOrder();
+// $BST->preOrder();
+// echo "\n";
+// $BST->inOrder();
+// echo "\n";
+// $BST->postOrder();
+// echo "\n";
+//$BST->levelOrder();
+$BST->preOrderNR();
 // echo $BST;
