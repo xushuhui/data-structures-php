@@ -11,25 +11,30 @@ class Arrays
     private $data;
     private $size;
     private $capacity;
+    // 构造函数，传入数组的容量capacity构造Array,默认数组的容量capacity=10
     public function __construct(int $capacity = 10)
     {
         $this->data = new SplFixedArray($capacity);
         $this->capacity = $capacity;
         $this->size = 0;
     }
+    // 获取数组中的元素个数
     public function getSize():int
     {
         return $this->size;
     }
+     // 返回数组是否为空
     public function isEmpty():bool
     {
         return $this->size == 0;
     }
+    // 获取数组的容量
     public function getCapacity():int
     {
         return $this->data->getSize();
     }
-    //O(n)
+    
+    //在index索引的位置插入一个新元素e O(n)
     public function add(int $index,int $e)
     {
      
@@ -47,17 +52,17 @@ class Arrays
         $this->size ++;
         
     }
-    //O(1)
+    //向所有元素后添加一个新元素 O(1)
     public function addLast($e)
     {
         $this->add($this->size,$e);
     }
-    //O(n)
+    //在所有元素前添加一个新元素 O(n)
     public function addFirst($e)
     {
         $this->add(0,$e);
     }
-    //O(1)
+    //获取index索引位置的元素 O(1)
     public function get($index)
     {
         if($index <0 || $index > $this->size){
@@ -71,7 +76,7 @@ class Arrays
     public function getFirst(){
         return $this->get(0);
     }
-    //O(1)
+    //修改index索引位置的元素为e O(1)
     public function set($index,$e)
     {
         if($index <0 || $index > $this->size){
@@ -79,7 +84,7 @@ class Arrays
         }
         $this->data[$index] = $e;
     }
-    //O(n)
+    //查找数组中是否有元素e O(n)
     public function contains($e):bool
     {
         for ($i=0; $i < $this->size; $i++) { 
@@ -89,7 +94,7 @@ class Arrays
         }
         return false;
     }
-    //O(n)
+    //查找数组中元素e所在的索引，如果不存在元素e，则返回-1 O(n)
     public function find($e):int
     {
         for ($i=0; $i < $this->size; $i++) { 
@@ -99,6 +104,7 @@ class Arrays
         }
         return -1;
     }
+    //从数组中删除index位置的元素, 返回删除的元素
     public function remove($index)
     {
         if($index <0 || $index > $this->size){
@@ -116,14 +122,17 @@ class Arrays
         }
         return $ret;
     }
+     // 从数组中删除最后一个元素, 返回删除的元素
     public function removeLast()
     {
         $this->remove($this->size-1);
     }
+    // 从数组中删除第一个元素, 返回删除的元素
     public function removeFirst()
     {
         $this->remove(0);
     }
+     // 从数组中删除元素e
     public function removeElement($e)
     {
         $index = $this->find($e);
@@ -131,6 +140,7 @@ class Arrays
             $this->remove($index);
         }
     }
+    // 将数组空间的容量变成newCapacity大小
     private function resize($newCapacity)
     {
         $newData = (new self($newCapacity))->data;

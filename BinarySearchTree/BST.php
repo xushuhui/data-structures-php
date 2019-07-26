@@ -143,11 +143,42 @@ class BST
             }
         }
     }
+    // 寻找二分搜索树的最小元素
+    public function minimum(){
+        if($this->size == 0){
+            throw new Exception("BST is empty");
+        }
+        $minNode = $this->minimumNode($this->root);
+        return $minNode->e;
+    }
+    // 返回以node为根的二分搜索树的最小值所在的节点
+    public function minimumNode($node){
+        if($node->left == null){
+            return $node;
+        }
+        return $this->minimumNode($node);
+    }
+    // 寻找二分搜索树的最大元素
+    public function maximum(){
+        if($this->size == 0){
+            throw new Exception("BST is empty");
+        }
+        $maxNode = $this->maximumNode($this->root);
+        return $maxNode->e;
+    }
+    // 返回以node为根的二分搜索树的最大值所在的节点
+    public function maximumNode($node){
+        if($node->right == null){
+            return $node;
+        }
+        return $this->maximumNode($node);
+    }
     public function __toString()
     {
         $this->generateBSTString($this->root, 0, static::$res);
         return static::$res;
     }
+    // 生成以node为根节点，深度为depth的描述二叉树的字符串
     private function generateBSTString($node, int $depth)
     {
         if ($node == null) {
