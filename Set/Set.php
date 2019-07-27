@@ -7,8 +7,8 @@
  * 博客: https://www.phpst.cn
  */
 interface Set{
-    function add();
-    function contains();
+    function add($e);
+    function contains($e);
     function remove($e);
     function getSize();
     function isEmpty();
