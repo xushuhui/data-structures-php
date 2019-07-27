@@ -7,6 +7,7 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
+include_once "Map.php";
 class Node
 {
     public $key;
@@ -23,7 +24,7 @@ class Node
         return $this->key . ':' . $this->value;
     }
 }
-class LinkedListMap
+class LinkedListMap implements Map
 {
     private $size;
     private $dummyHead;
