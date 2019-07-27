@@ -7,11 +7,11 @@
  * 博客: https://www.phpst.cn
  */
 interface Map{
-    function add();
-    function contains();
-    function get();
-    function set();
-    function remove($e);
+    function add($key,$value);
+    function contains($key);
+    function get($key);
+    function set($key,$value);
+    function remove($key);
     function getSize();
     function isEmpty();
 }
