@@ -21,6 +21,13 @@ class BST
         $this->root = null;
         $this->size = 0;
     }
+    public function getSize(){
+        return $this->size;
+    }
+
+    public function isEmpty(){
+        return $this->size == 0;
+    }
     // 向二分搜索树中添加新的元素e
     public function add($e)
     {
