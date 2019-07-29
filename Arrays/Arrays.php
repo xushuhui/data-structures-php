@@ -33,15 +33,12 @@ class Arrays
     {
         return $this->data->getSize();
     }
-    
     //在index索引的位置插入一个新元素e O(n)
     public function add(int $index,int $e)
     {
-     
         if($index <0 || $index > $this->size){
             throw new Exception("index is illegal");
         }
-       
         if ($this->size == $this->capacity){
             $this->resize(2 * $this->capacity);
         }

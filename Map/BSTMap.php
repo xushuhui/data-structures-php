@@ -7,7 +7,7 @@
  * 博客: https://www.phpst.cn
  */
 include_once "Map.php";
-class Node
+class BSTNode
 {
     public $key;
     public $value;
@@ -48,7 +48,7 @@ class BSTMap implements Map
     private function addNode($node,$key, $value){
         if($node == null){
             $this->size++;
-            return new Node($key, $value);
+            return new BSTNode($key, $value);
         }
     }
      // 返回以node为根节点的二分搜索树中，key所在的节点

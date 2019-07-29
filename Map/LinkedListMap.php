@@ -76,7 +76,7 @@ class LinkedListMap implements Map
     { 
         $node = $this->getNode($key);
         if($node == null){
-            throw new Exception("$key not exist");
+            throw new Exception($key." not exist");
         }
         $node->value = $value;
     }

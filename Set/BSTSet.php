@@ -8,7 +8,7 @@
  */
 include_once "BST.php";
 include_once "Set.php";
-class BSTSet
+class BSTSet implements Set
 {
     private $bst;
     public function __construct(){

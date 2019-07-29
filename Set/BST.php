@@ -6,7 +6,7 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-class Node
+class BSTNode
 {
     public $left;
     public $right;
@@ -46,7 +46,7 @@ class BST
     {
         if ($node == null) {
             $this->size++;
-            return new Node($e);
+            return new BSTNode($e);
         }
         if ($e < $node->e) {
             $node->left = $this->addNode($node->left, $e);
