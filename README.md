@@ -13,13 +13,14 @@
 - [x] 集合 [（Set）](https://github.com/xushuhui/Data-Structures/tree/master/Set)
     - [x] 链表集合 [（Linked List Set）](https://github.com/xushuhui/Data-Structures/tree/master/Set/LinkedListSet.php)
     - [x] 二分搜索树集合 [（BST Set）](https://github.com/xushuhui/Data-Structures/tree/master/Set/BSTSet.php)
-- [x] 映射 [（ Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map)
+- [x] 映射 [（Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map)
     - [x] 链表映射 [（Linked List Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map/LinkedListMap.php)
     - [x] 二分搜索树映射 [（BST Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map/BSTMap.php)
+- [ ] 优先队列 [（PriorityQueue）](https://github.com/xushuhui/Data-Structures/tree/master/PriorityQueue)
 - [ ] 堆
-- [ ] 线段树
-- [ ] Trie
-- [ ] 并查集
-- [ ] AVL
-- [ ] 红黑树
-- [ ] 哈希表
+- [ ] 线段树 [（SegmentTree）](https://github.com/xushuhui/Data-Structures/tree/master/SegmentTree)
+- [ ] 字典树 [（Trie）](https://github.com/xushuhui/Data-Structures/tree/master/Trie)
+- [ ] 并查集 [（UnionFind）](https://github.com/xushuhui/Data-Structures/tree/master/UnionFind)
+- [ ] 平衡二叉树 [（AVLTree）](https://github.com/xushuhui/Data-Structures/tree/master/AVLTree)
+- [ ] 红黑树 [（RedBlackTree）](https://github.com/xushuhui/Data-Structures/tree/master/RedBlackTree)
+- [ ] 哈希表 [（HashTable）](https://github.com/xushuhui/Data-Structures/tree/master/HashTable)
