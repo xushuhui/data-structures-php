@@ -5,10 +5,13 @@ class MaxHeap
     private $data;
     public function __construct($capacity = 10,$arr = [])
     {
-        $this->data = new Arrays($capacity,$arr);
-        for ($i=$this->parent(count($arr)); $i >=0 ; $i--) { 
-            $this->siftDown($i);
+        $this->data = (new Arrays($capacity,$arr));
+        if($arr){
+            for ($i=$this->parent(count($arr)); $i >=0 ; $i--) { 
+                $this->siftDown($i);
+            }
         }
+        
     }
     
 
@@ -28,7 +31,7 @@ class MaxHeap
         if ($index == 0) {
             throw new \Exception("index error");
         }
-        return ($index - 1) / 2;
+        return (int)(($index - 1) / 2);
     }
     // 返回完全二叉树的数组表示中，一个索引所表示的元素的左孩子节点的索引
     public function leftChild($index)
@@ -44,10 +47,11 @@ class MaxHeap
     public function add($e)
     {
         $this->data->addLast($e);
-        $this->siftUp($this->data->getSize());
+        $this->siftUp($this->data->getSize() - 1);
     }
     private function siftUp($k)
     {
+       
         while ($k > 0 && $this->data->get($this->parent($k)) < $this->data->get($k)) {
             $this->data->swap($k, $this->parent($k));
             $k = $this->parent($k);
@@ -59,7 +63,7 @@ class MaxHeap
         if ($this->data->getSize() == 0) {
             throw new \Exception("heap is empty");
         }
-        return $this->data[0];
+        return $this->data->get(0);
     }
     // 取出堆中最大元素
     public function extractMax()

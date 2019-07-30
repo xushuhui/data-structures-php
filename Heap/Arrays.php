@@ -8,11 +8,11 @@
  */
 class Arrays
 {
-    private $data;
+    public $data;
     private $size;
     private $capacity;
     // 构造函数，传入数组的容量capacity构造Array,默认数组的容量capacity=10
-    public function __construct(int $capacity = 10,array $arr = [])
+    public function __construct(int $capacity = 10,$arr = [])
     {
         $this->data = new SplFixedArray($capacity);
         $this->capacity = $capacity;

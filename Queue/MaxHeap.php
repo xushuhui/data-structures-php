@@ -28,7 +28,7 @@ class MaxHeap
         if ($index == 0) {
             throw new \Exception("index error");
         }
-        return ($index - 1) / 2;
+        return (int)(($index - 1) / 2);
     }
     // 返回完全二叉树的数组表示中，一个索引所表示的元素的左孩子节点的索引
     public function leftChild($index)
@@ -48,6 +48,7 @@ class MaxHeap
     }
     private function siftUp($k)
     {
+    
         while ($k > 0 && $this->data->get($this->parent($k)) < $this->data->get($k)) {
             $this->data->swap($k, $this->parent($k));
             $k = $this->parent($k);
