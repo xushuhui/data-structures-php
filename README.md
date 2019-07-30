@@ -8,6 +8,7 @@
     - [x] 数组队列 [（Array Queue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue/ArrayQueue.php)
     - [x] 循环队列 [（Loop Queue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue/LoopQueue.php)
     - [x] 链表队列 [（Linked List Queue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue/LinkedListQueue.php)
+    - [x] 优先队列 [（PriorityQueue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue/PriorityQueue.php)
 - [x] 链表 [（Linked List）](https://github.com/xushuhui/Data-Structures/tree/master/LinkedList)
 - [x] 二分搜索树 [（Binary Search Tree）](https://github.com/xushuhui/Data-Structures/tree/master/BinarySearchTree)
 - [x] 集合 [（Set）](https://github.com/xushuhui/Data-Structures/tree/master/Set)
@@ -16,8 +17,9 @@
 - [x] 映射 [（Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map)
     - [x] 链表映射 [（Linked List Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map/LinkedListMap.php)
     - [x] 二分搜索树映射 [（BST Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map/BSTMap.php)
-- [ ] 优先队列 [（PriorityQueue）](https://github.com/xushuhui/Data-Structures/tree/master/PriorityQueue)
-- [ ] 堆
+
+- [x] 堆 [（Heap）](https://github.com/xushuhui/Data-Structures/tree/master/Heap)
+    - [x] 最大堆 [（Max Heap）](https://github.com/xushuhui/Data-Structures/tree/master/Map/MaxHeap.php)
 - [ ] 线段树 [（SegmentTree）](https://github.com/xushuhui/Data-Structures/tree/master/SegmentTree)
 - [ ] 字典树 [（Trie）](https://github.com/xushuhui/Data-Structures/tree/master/Trie)
 - [ ] 并查集 [（UnionFind）](https://github.com/xushuhui/Data-Structures/tree/master/UnionFind)

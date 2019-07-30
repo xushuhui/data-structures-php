@@ -12,11 +12,19 @@ class Arrays
     private $size;
     private $capacity;
     // 构造函数，传入数组的容量capacity构造Array,默认数组的容量capacity=10
-    public function __construct(int $capacity = 10)
+    public function __construct(int $capacity = 10,array $arr = [])
     {
         $this->data = new SplFixedArray($capacity);
         $this->capacity = $capacity;
         $this->size = 0;
+        if($arr){
+            $count = count($arr);
+            $this->data = (new self($count))->data;
+            for ($i=0; $i < $count; $i++) { 
+                $this->data[$i] = $arr[$i];
+            }
+            $this->size = $count;
+        }
     }
     // 获取数组中的元素个数
     public function getSize():int
