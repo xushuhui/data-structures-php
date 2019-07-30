@@ -7,7 +7,7 @@
  * 博客: https://www.phpst.cn
  */
 include_once "Queue.php";
-include_once "Array.php";
+include_once "Arrays.php";
 class LoopQueue implements Queue
 {
     private $data = [];

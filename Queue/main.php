@@ -27,10 +27,19 @@ include_once "LinkedListQueue.php";
 //  echo $loopqueue;
 // $queue->enqueue(10);
 //  echo $loopqueue;
-$linkedListQueue = new LinkedListQueue();
-for ($i=1; $i < 5; $i++) { 
-    $linkedListQueue->enqueue($i);
+// $linkedListQueue = new LinkedListQueue();
+// for ($i=1; $i < 5; $i++) { 
+//     $linkedListQueue->enqueue($i);
+// }
+// echo $linkedListQueue;
+// $linkedListQueue->dequeue();
+// echo $linkedListQueue;
+$arr = [];
+for( $i = 0 ; $i < 100000 ; $i ++){
+    array_push($arr,mt_rand(0,999));
 }
-echo $linkedListQueue;
-$linkedListQueue->dequeue();
-echo $linkedListQueue;
+
+for( $i = 0 ; $i < 100000 ; $i ++){
+    array_pop($arr);
+}
+echo 111;

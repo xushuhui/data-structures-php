@@ -8,11 +8,11 @@
  */
 class Arrays
 {
-    private $data;
+    public $data;
     private $size;
     private $capacity;
     // 构造函数，传入数组的容量capacity构造Array,默认数组的容量capacity=10
-    public function __construct(int $capacity = 10,array $arr = [])
+    public function __construct(int $capacity = 10,$arr = [])
     {
         $this->data = new SplFixedArray($capacity);
         $this->capacity = $capacity;
@@ -41,15 +41,12 @@ class Arrays
     {
         return $this->data->getSize();
     }
-    
     //在index索引的位置插入一个新元素e O(n)
     public function add(int $index,int $e)
     {
-     
         if($index <0 || $index > $this->size){
             throw new Exception("index is illegal");
         }
-       
         if ($this->size == $this->capacity){
             $this->resize(2 * $this->capacity);
         }
@@ -147,6 +144,15 @@ class Arrays
         if($index != -1){
             $this->remove($index);
         }
+    }
+
+    public function swap($i,$j){
+        if($i < 0 || $i >= $this->size|| $j <0 || $j >=$this->size){
+            throw new Exception("Index is illegal.");
+        }
+        $t = $this->data[$i];
+        $this->data[$i] = $this->data[$j];
+        $this->data[$j] = $t;
     }
     // 将数组空间的容量变成newCapacity大小
     private function resize($newCapacity)

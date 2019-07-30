@@ -9,6 +9,7 @@
 include_once "ArrayQueue.php";
 include_once "LoopQueue.php";
 include_once "LinkedListQueue.php";
+include_once "PriorityQueue.php";
 class TestQueue
 {
     public static function test($queue,$count){
@@ -21,20 +22,25 @@ class TestQueue
             $queue->dequeue();
         }
         $endTime = microtime(true);
+        unset($queue);
         return ($endTime - $startTime);
     }
     public static function mainQueue(){
         $count = 10000;
-        $arrqueue = new ArrayQueue();
-        $t1 = self::test($arrqueue,$count);//7.937704086303
-        
+       
         $loopqueue = new LoopQueue();
         $t2 = self::test($loopqueue,$count);
         $linkedListQueue = new LinkedListQueue();
         $t3 = self::test($linkedListQueue,$count);
-        echo("\ntl---".$t1);
-        echo("\nt2---".$t2);
-        echo("\nt2---".$t3);
+        $priorityQueue = new PriorityQueue();
+        $t4 = self::test($priorityQueue,$count);
+        
+        echo("\nLoopQueue time---".$t2);
+        echo("\nLinkedListQueue time---".$t3);
+        echo("\nPriorityQueue time---".$t4);
+        $arrqueue = new ArrayQueue();
+        $t1 = self::test($arrqueue,$count);//7.937704086303
+        echo("\ArrayQueue time---".$t1);
     }
 }
 TestQueue::mainQueue();
