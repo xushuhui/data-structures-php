@@ -17,10 +17,9 @@
 - [x] 映射 [（Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map)
     - [x] 链表映射 [（Linked List Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map/LinkedListMap.php)
     - [x] 二分搜索树映射 [（BST Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map/BSTMap.php)
-
 - [x] 堆 [（Heap）](https://github.com/xushuhui/Data-Structures/tree/master/Heap)
     - [x] 最大堆 [（Max Heap）](https://github.com/xushuhui/Data-Structures/tree/master/Map/MaxHeap.php)
-- [ ] 线段树 [（SegmentTree）](https://github.com/xushuhui/Data-Structures/tree/master/SegmentTree)
+- [x] 线段树 [（SegmentTree）](https://github.com/xushuhui/Data-Structures/tree/master/SegmentTree)
 - [ ] 字典树 [（Trie）](https://github.com/xushuhui/Data-Structures/tree/master/Trie)
 - [ ] 并查集 [（UnionFind）](https://github.com/xushuhui/Data-Structures/tree/master/UnionFind)
 - [ ] 平衡二叉树 [（AVLTree）](https://github.com/xushuhui/Data-Structures/tree/master/AVLTree)

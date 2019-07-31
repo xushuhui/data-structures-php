@@ -8,5 +8,7 @@
  */
 class HashTable
 {
-    
+    public function __construct(){
+        
+    }
 }
