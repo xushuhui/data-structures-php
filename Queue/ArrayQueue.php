@@ -11,37 +11,43 @@ include_once "Arrays.php";
 class ArrayQueue implements Queue
 {
     private $array;
-    public function __construct(int $capacity = 10){
+    public function __construct(int $capacity = 10)
+    {
         $this->array = new arrays($capacity);
     }
-    public function getSize(){
+    public function getSize()
+    {
         return $this->array->getSize();
     }
-    public function isEmpty(){
+    public function isEmpty()
+    {
         return $this->array->isEmpty();
     }
-    public function enqueue($e){
+    public function enqueue($e)
+    {
         $this->array->addLast($e);
     }
-    public function dequeue(){
-        if($this->isEmpty()){
+    public function dequeue()
+    {
+        if ($this->isEmpty()) {
             throw new Exception("Queue is empty");
         }
         return $this->array->removeFirst();
     }
-    public function getFront(){
+    public function getFront()
+    {
         return $this->array->getFirst();
     }
     public function __toString()
     {
-        $str="\nQueue front [";
-        for($i = 0 ; $i < $this->getSize(); $i ++){
-            $str.= $this->array->get($i);
-            if($i != $this->getSize() - 1){
-                $str.= ", ";
+        $str = "\nQueue front [";
+        for ($i = 0; $i < $this->getSize(); $i++) {
+            $str .= $this->array->get($i);
+            if ($i != $this->getSize() - 1) {
+                $str .= ", ";
             }
         }
-        $str.="] tail";
+        $str .= "] tail";
         return $str;
     }
 }

@@ -9,10 +9,10 @@
 include_once "Arrays.php";
 $arr = new Arrays(3);
 echo $arr;
-for ($i=0; $i < 15; $i++) { 
+for ($i = 0; $i < 15; $i++) {
     $arr->addLast($i);
 }
-$arr->set(1,12);
+$arr->set(1, 12);
 echo $arr;
 $arr->removeFirst();
 echo $arr;
