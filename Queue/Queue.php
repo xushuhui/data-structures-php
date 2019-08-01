@@ -6,10 +6,11 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-interface Queue{
-    function getSize();
-    function isEmpty();
-    function enqueue($e);
-    function dequeue();
-    function getFront();
+interface Queue
+{
+    public function getSize();
+    public function isEmpty();
+    public function enqueue($e);
+    public function dequeue();
+    public function getFront();
 }

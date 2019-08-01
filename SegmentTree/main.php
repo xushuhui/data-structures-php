@@ -8,9 +8,9 @@
  */
 include_once "SegmentTree.php";
 $nums = [-2, 0, 3, -5, 2, -1];
-$func = function($a,$b){
+$func = function ($a, $b) {
     return $a+$b;
 };
-$segTree = new SegmentTree($nums,$func);
+$segTree = new SegmentTree($nums, $func);
 
-print_r ($segTree);
+print_r($segTree);

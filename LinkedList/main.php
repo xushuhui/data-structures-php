@@ -8,12 +8,11 @@
  */
 include_once "LinkedList.php";
 $link = new LinkedList();
-for ($i=1; $i < 5; $i++) { 
+for ($i = 1; $i < 5; $i++) {
     $link->addFirst($i);
-   
 }
-$link->set(2,6666);
-echo ($link);
+$link->set(2, 6666);
+echo($link);
 // $link->addFirst(1);
 
 // $link->addFirst(2);

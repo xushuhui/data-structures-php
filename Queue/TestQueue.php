@@ -36,12 +36,12 @@ class TestQueue
         $priorityQueue = new PriorityQueue();
         $t4 = self::test($priorityQueue, $count);
 
-        echo ("\nLoopQueue time---" . $t2);
-        echo ("\nLinkedListQueue time---" . $t3);
-        echo ("\nPriorityQueue time---" . $t4);
+        echo("\nLoopQueue time---" . $t2);
+        echo("\nLinkedListQueue time---" . $t3);
+        echo("\nPriorityQueue time---" . $t4);
         $arrqueue = new ArrayQueue();
         $t1 = self::test($arrqueue, $count); //7.937704086303
-        echo ("\ArrayQueue time---" . $t1);
+        echo("\ArrayQueue time---" . $t1);
     }
 }
 TestQueue::mainQueue();

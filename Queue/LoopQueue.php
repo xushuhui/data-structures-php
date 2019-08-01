@@ -74,7 +74,6 @@ class LoopQueue implements Queue
         $this->capacity = $newCapacity;
         $this->front = 0;
         $this->tail = $this->size;
-
     }
 
     public function __toString()
@@ -86,7 +85,6 @@ class LoopQueue implements Queue
             if (($i + 1) % $this->capacity != $this->tail) {
                 $str .= ", ";
             }
-
         }
         $str .= "] tail";
         return $str;

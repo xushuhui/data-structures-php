@@ -11,22 +11,28 @@ include_once "MaxHeap.php";
 class PriorityQueue implements Queue
 {
     private $maxHeap;
-    public function __construct(){
+    public function __construct()
+    {
         $this->maxHeap = new MaxHeap();
     }
-    public function getSize(){
-       return $this->maxHeap->getSize();
+    public function getSize()
+    {
+        return $this->maxHeap->getSize();
     }
-    public function isEmpty(){
+    public function isEmpty()
+    {
         return $this->maxHeap->isEmpty();
     }
-    public function enqueue($e){
+    public function enqueue($e)
+    {
         $this->maxHeap->add($e);
     }
-    public function dequeue(){
+    public function dequeue()
+    {
         return $this->maxHeap->extractMax();
     }
-    public function getFront(){
+    public function getFront()
+    {
         return $this->maxHeap->findMax();
     }
 }

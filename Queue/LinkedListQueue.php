@@ -23,7 +23,8 @@ class Node
 }
 class LinkedListQueue implements Queue
 {
-    private $head, $tail;
+    private $head;
+    private $tail;
     private $size;
     public function __construct()
     {

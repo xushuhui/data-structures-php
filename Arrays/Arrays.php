@@ -47,7 +47,6 @@ class Arrays
         }
         $this->data[$index] = $e;
         $this->size++;
-
     }
     //向所有元素后添加一个新元素 O(1)
     public function addLast($e)

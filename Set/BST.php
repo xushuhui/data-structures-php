@@ -22,17 +22,19 @@ class BST
 {
     private $root;
     private $size;
-    static $res;
+    public static $res;
     public function __construct()
     {
         $this->root = null;
         $this->size = 0;
     }
-    public function getSize(){
+    public function getSize()
+    {
         return $this->size;
     }
 
-    public function isEmpty(){
+    public function isEmpty()
+    {
         return $this->size == 0;
     }
     // 向二分搜索树中添加新的元素e
@@ -60,7 +62,7 @@ class BST
     {
         return $this->containsNode($this->root, $e);
     }
-     // 看以node为根的二分搜索树中是否包含元素e, 递归算法
+    // 看以node为根的二分搜索树中是否包含元素e, 递归算法
     private function containsNode($node, $e)
     {
         if ($node == null) {
@@ -89,21 +91,22 @@ class BST
         $this->preOrderNode($node->left);
         $this->preOrderNode($node->right);
     }
-     // 二分搜索树的非递归前序遍历
-    public function preOrderNR(){
-        if($this->root == null){
+    // 二分搜索树的非递归前序遍历
+    public function preOrderNR()
+    {
+        if ($this->root == null) {
             return;
         }
         //借助php原生栈实现
         $stack = new SplStack();
         $stack->push($this->root);
-        while(!$stack->isEmpty()){
+        while (!$stack->isEmpty()) {
             $cur = $stack->pop();
             echo $cur->e;
-            if($cur->right != null){
+            if ($cur->right != null) {
                 $stack->push($cur->right);
             }
-            if($cur->left != null){
+            if ($cur->left != null) {
                 $stack->push($cur->left);
             }
         }
@@ -139,64 +142,71 @@ class BST
         $this->postOrderNode($node->right);
         echo $node->e;
     }
-     // 二分搜索树的层序遍历
-    public function levelOrder(){
-        if($this->root == null){
+    // 二分搜索树的层序遍历
+    public function levelOrder()
+    {
+        if ($this->root == null) {
             return;
         }
         $queue = new SplQueue();
         $queue->enqueue($this->root);
-        while(!$queue->isEmpty()){
+        while (!$queue->isEmpty()) {
             $cur = $queue->dequeue();
             echo $cur->e;
-            if($cur->left != null){
+            if ($cur->left != null) {
                 $queue->enqueue($cur->left);
             }
-            if($cur->right != null){
+            if ($cur->right != null) {
                 $queue->enqueue($cur->right);
             }
         }
     }
     // 寻找二分搜索树的最小元素
-    public function minimum(){
-        if($this->size == 0){
+    public function minimum()
+    {
+        if ($this->size == 0) {
             throw new Exception("BST is empty");
         }
         $minNode = $this->minimumNode($this->root);
         return $minNode->e;
     }
     // 返回以node为根的二分搜索树的最小值所在的节点
-    private function minimumNode($node){
-        if($node->left == null){
+    private function minimumNode($node)
+    {
+        if ($node->left == null) {
             return $node;
         }
         return $this->minimumNode($node->left);
     }
     // 寻找二分搜索树的最大元素
-    public function maximum(){
-        if($this->size == 0){
+    public function maximum()
+    {
+        if ($this->size == 0) {
             throw new Exception("BST is empty");
         }
         $maxNode = $this->maximumNode($this->root);
         return $maxNode->e;
     }
     // 返回以node为根的二分搜索树的最大值所在的节点
-    private function maximumNode($node){
-        if($node->right == null){
+    private function maximumNode($node)
+    {
+        if ($node->right == null) {
             return $node;
         }
         return $this->maximumNode($node->right);
     }
     // 从二分搜索树中删除最小值所在节点, 返回最小值
-    public function removeMin(){
+    public function removeMin()
+    {
         $ret = $this->minimum();
         $this->root = $this->removeMinNode($this->root);
         return $ret;
     }
     // 删除掉以node为根的二分搜索树中的最小节点
     // 返回删除节点后新的二分搜索树的根
-    public function removeMinNode($node){
-        if($node->left == null){
+    public function removeMinNode($node)
+    {
+        if ($node->left == null) {
             $rightNode = $node->right;
             $node->right = null;
             $this->size -- ;
@@ -205,16 +215,18 @@ class BST
         $node->left = $this->removeMinNode($node->left);
         return $node;
     }
-     // 从二分搜索树中删除最大值所在节点
-    public function removeMax(){
+    // 从二分搜索树中删除最大值所在节点
+    public function removeMax()
+    {
         $ret = 8;
         $this->root = $this->removeMaxNode($this->root);
         return $ret;
     }
     // 删除掉以node为根的二分搜索树中的最大节点
     // 返回删除节点后新的二分搜索树的根
-    public function removeMaxNode($node){
-        if($node->right == null){
+    public function removeMaxNode($node)
+    {
+        if ($node->right == null) {
             $leftNode = $node->left;
             $node->left = null;
             $this->size--;
@@ -224,32 +236,34 @@ class BST
         return $node;
     }
     // 从二分搜索树中删除元素为e的节点
-    public function remove($e){
-        $this->root = $this->removeNode($this->root,$e);
+    public function remove($e)
+    {
+        $this->root = $this->removeNode($this->root, $e);
     }
-     // 删除掉以node为根的二分搜索树中值为e的节点, 递归算法
+    // 删除掉以node为根的二分搜索树中值为e的节点, 递归算法
     // 返回删除节点后新的二分搜索树的根
-    private function removeNode($node,$e){
-        if($node == null){
+    private function removeNode($node, $e)
+    {
+        if ($node == null) {
             return null;
         }
-        if($e < $node->e){
-            $node->left = $this->removeNode($node->left,$e);
+        if ($e < $node->e) {
+            $node->left = $this->removeNode($node->left, $e);
             return $node;
-        }elseif ($e > $node->e) {
+        } elseif ($e > $node->e) {
             $node->right = $this->removeNode($node->right, $e);
             return $node;
-        }else{//$e == $node->e
+        } else {//$e == $node->e
             
             // 待删除节点左子树为空的情况
-            if($node->left == null){
+            if ($node->left == null) {
                 $rightNode = $node->right;
                 $node->right = null;
                 $this->size--;
                 return $rightNode;
             }
             // 待删除节点右子树为空的情况
-            if($node->right == null){
+            if ($node->right == null) {
                 $leftNode = $node->left;
                 $node->left = null;
                 $this->size--;

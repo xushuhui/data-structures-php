@@ -10,25 +10,27 @@ include_once "ArrayStack.php";
 include_once "LinkedListStack.php";
 class TestStack
 {
-    public static function test($stack,$count){
+    public static function test($stack, $count)
+    {
         $startTime = microtime(true);
-        for( $i = 0 ; $i < $count ; $i ++){
-            $stack->push(mt_rand(0,999));
+        for ($i = 0 ; $i < $count ; $i ++) {
+            $stack->push(mt_rand(0, 999));
         }
             
-        for( $i = 0 ; $i < $count ; $i ++){
+        for ($i = 0 ; $i < $count ; $i ++) {
             $stack->pop();
         }
         $endTime = microtime(true);
         return ($endTime - $startTime);
     }
-    public static function main(){
+    public static function main()
+    {
         $count = 1000000;
         $arrayStack = new ArrayStack();
-        $t1 = self::test($arrayStack,$count);
+        $t1 = self::test($arrayStack, $count);
         
         $linkedListStock = new LinkedListStack();
-        $t2 = self::test($linkedListStock,$count);
+        $t2 = self::test($linkedListStock, $count);
         print_r("\ntl---".$t1);
         print_r("\nt2---".$t2);
         echo "\n";

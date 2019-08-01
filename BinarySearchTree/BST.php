@@ -22,7 +22,7 @@ class BST
 {
     private $root;
     private $size;
-    static $res;
+    public static $res;
     public function __construct()
     {
         $this->root = null;

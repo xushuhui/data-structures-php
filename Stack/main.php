@@ -9,7 +9,7 @@
 include_once "ArrayStack.php";
 include_once "LinkedListStack.php";
 $arrayStock = new ArrayStack();
-for ($i=1; $i < 5; $i++) { 
+for ($i=1; $i < 5; $i++) {
     $arrayStock->push($i);
 }
 echo $arrayStock;
@@ -18,7 +18,7 @@ echo $arrayStock;
 
 $linkedListStock = new LinkedListStack();
 
-for ($i=1; $i < 5; $i++) { 
+for ($i=1; $i < 5; $i++) {
     $linkedListStock->push($i);
 }
 echo $linkedListStock;

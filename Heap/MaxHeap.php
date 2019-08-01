@@ -49,7 +49,6 @@ class MaxHeap
     }
     private function siftUp($k)
     {
-
         while ($k > 0 && $this->data->get($this->parent($k)) < $this->data->get($k)) {
             $this->data->swap($k, $this->parent($k));
             $k = $this->parent($k);

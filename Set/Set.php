@@ -6,10 +6,11 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-interface Set{
-    function add($e);
-    function contains($e);
-    function remove($e);
-    function getSize();
-    function isEmpty();
+interface Set
+{
+    public function add($e);
+    public function contains($e);
+    public function remove($e);
+    public function getSize();
+    public function isEmpty();
 }

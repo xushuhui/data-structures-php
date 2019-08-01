@@ -6,10 +6,11 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-interface Stack{
-    function getSize();
-    function isEmpty();
-    function push($e);
-    function pop();
-    function peek();
+interface Stack
+{
+    public function getSize();
+    public function isEmpty();
+    public function push($e);
+    public function pop();
+    public function peek();
 }

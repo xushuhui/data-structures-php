@@ -7,25 +7,31 @@
  * 博客: https://www.phpst.cn
  */
 include_once "LinkedList.php";
-class LinkedListStack  implements Stack
+class LinkedListStack implements Stack
 {
     private $list;
-    public function __construct() {
+    public function __construct()
+    {
         $this->list = new LinkedList();
     }
-    public function getSize(){
+    public function getSize()
+    {
         return $this->list->getSize();
     }
-    public function isEmpty() {
+    public function isEmpty()
+    {
         return $this->list->isEmpty();
     }
-    public function pop(){
+    public function pop()
+    {
         return $this->list->removeFirst();
     }
-    public function push($e){
+    public function push($e)
+    {
         return $this->list->addFirst($e);
     }
-    public function peek(){
+    public function peek()
+    {
         return $this->list->getFirst();
     }
     public function __toString()

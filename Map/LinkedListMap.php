@@ -73,25 +73,25 @@ class LinkedListMap implements Map
     }
 
     public function set($key, $value)
-    { 
+    {
         $node = $this->getNode($key);
-        if($node == null){
-            throw new Exception($key." not exist");
+        if ($node == null) {
+            throw new Exception($key . " not exist");
         }
         $node->value = $value;
     }
     public function remove($key)
-    { 
+    {
         $prev = $this->dummyHead;
-        while($prev->next != null){
-            if($prev->next->key == $key){
+        while ($prev->next != null) {
+            if ($prev->next->key == $key) {
                 break;
             }
             $prev = $prev->next;
         }
-        if($prev->next != null){
+        if ($prev->next != null) {
             $delNode = $prev->next;
-            $prev->next =$delNode->next;
+            $prev->next = $delNode->next;
             $delNode->next = null;
             $this->size--;
             return $delNode->value;

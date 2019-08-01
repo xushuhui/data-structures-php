@@ -3,15 +3,14 @@ include_once "Arrays.php";
 class MaxHeap
 {
     private $data;
-    public function __construct($capacity = 10,$arr = [])
+    public function __construct($capacity = 10, $arr = [])
     {
-        $this->data = (new Arrays($capacity,$arr));
-        if($arr){
-            for ($i=$this->parent(count($arr)); $i >=0 ; $i--) { 
+        $this->data = (new Arrays($capacity, $arr));
+        if ($arr) {
+            for ($i=$this->parent(count($arr)); $i >=0 ; $i--) {
                 $this->siftDown($i);
             }
         }
-        
     }
     
 
@@ -51,7 +50,6 @@ class MaxHeap
     }
     private function siftUp($k)
     {
-       
         while ($k > 0 && $this->data->get($this->parent($k)) < $this->data->get($k)) {
             $this->data->swap($k, $this->parent($k));
             $k = $this->parent($k);
@@ -81,19 +79,19 @@ class MaxHeap
             if ($j + 1 < $this->data->getSize() && $this->data->get($j + 1) > $this->data->get($j)) {
                 $j ++;
             }
-             // data[j] 是 leftChild 和 rightChild 中的最大值
-             if($this->data->get($k) >= $this->data->get($j)){
-                 break;
-             }
-             $this->data->swap($k,$j);
-             $k = $j;
-            
+            // data[j] 是 leftChild 和 rightChild 中的最大值
+            if ($this->data->get($k) >= $this->data->get($j)) {
+                break;
+            }
+            $this->data->swap($k, $j);
+            $k = $j;
         }
     }
     // 取出堆中的最大元素，并且替换成元素e
-    public function replace($e){
+    public function replace($e)
+    {
         $ret = $this->findMax();
-        $this->data->set(0,$e);
+        $this->data->set(0, $e);
         $this->siftDown(0);
         return $ret;
     }

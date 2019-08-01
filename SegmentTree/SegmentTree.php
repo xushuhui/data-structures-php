@@ -21,7 +21,7 @@ class SegmentTree
         }
         $this->tree = [];
         $this->merger = $merger;
-        $this->buildSegmentTree(0, 0,  $count - 1);
+        $this->buildSegmentTree(0, 0, $count - 1);
     }
     private function buildSegmentTree($treeIndex, $left, $right)
     {
@@ -59,9 +59,9 @@ class SegmentTree
     {
         $res = '[';
         for ($i = 0; $i < count($this->tree); $i++) {
-            if ($this->tree[$i] != null)
+            if ($this->tree[$i] != null) {
                 $res .= $this->tree[$i];
-            else {
+            } else {
                 $res .= "null";
             }
             if ($i != count($this->tree) - 1) {

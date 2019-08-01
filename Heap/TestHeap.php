@@ -13,9 +13,9 @@ class TestHeap
     public static function test($testData, $isHeapify)
     {
         $startTime = microtime(true);
-        if ($isHeapify)
+        if ($isHeapify) {
             $maxHeap = new MaxHeap(0, $testData);
-        else {
+        } else {
             $maxHeap = new MaxHeap();
             foreach ($testData as $num) {
                 $maxHeap->add($num);
@@ -33,7 +33,7 @@ class TestHeap
                 throw new Exception("Error");
             }
         }
-        echo ("Test MaxHeap completed.");
+        echo("Test MaxHeap completed.");
         $endTime = microtime(true);
         return ($endTime - $startTime);
     }
