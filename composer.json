@@ -1,0 +1,12 @@
+{
+    "name": "xushuhui/data-structures-php",
+    "description": "data structure for PHP",
+    "type": "Project",
+    "authors": [
+        {
+            "name": "xushuhui",
+            "email": "474497097@qq.com"
+        }
+    ],
+    "require": {}
+}
