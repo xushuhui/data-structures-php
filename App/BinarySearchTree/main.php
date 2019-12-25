@@ -8,7 +8,7 @@ namespace App\BinarySearchTree;
  * 博客: https://www.phpst.cn
  */
 
-include_once "BST.php";
+
 $BST = new BST();
 $nums = [5, 3, 7, 4, 2, 6, 8];
 foreach ($nums as $v) {

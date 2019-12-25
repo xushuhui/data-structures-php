@@ -34,7 +34,7 @@ class SegmentTree
         $mid = $left + ($right - 1) / 2;
         $this->buildSegmentTree($leftTreeIndex, $left, $mid);
         $this->buildSegmentTree($rightTreeIndex, $mid + 1, $right);
-        $this->tree[$treeIndex] = $this->merger($this->tree[$leftTreeIndex], $this->tree($rightTreeIndex));
+        //$this->tree[$treeIndex] = $this->merger($this->tree[$leftTreeIndex], $this->tree($rightTreeIndex));
     }
     public function getSize()
     {
@@ -43,7 +43,7 @@ class SegmentTree
     public function get($index)
     {
         if ($index < 0 || $index >= count($this->data)) {
-            throw new \\Exception("Index is illegal");
+            throw new \Exception("Index is illegal");
         }
         return $this->data[$index];
     }

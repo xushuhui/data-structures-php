@@ -7,7 +7,7 @@ namespace App\Heap;
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-include_once "MaxHeap.php";
+
 class TestHeap
 {
     public static function test($testData, $isHeapify)
@@ -40,7 +40,7 @@ class TestHeap
     public static function main()
     {
         $count = 100010;
-        $testData = (new SplFixedArray($count))->toArray();
+        $testData = (new \SplFixedArray($count))->toArray();
         for ($i = 0; $i < $count; $i++) {
             $testData[$i] = mt_rand(1, 100000);
         }

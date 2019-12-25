@@ -53,7 +53,7 @@ class MaxHeap
     private function siftUp($k)
     {
         while ($k > 0 && $this->data->get($this->parent($k)) < $this->data->get($k)) {
-            $this->data->swap($k, $this->parent($k));
+            //$this->data->swap($k, $this->parent($k));
             $k = $this->parent($k);
         }
     }
@@ -69,7 +69,7 @@ class MaxHeap
     public function extractMax()
     {
         $ret = $this->findMax();
-        $this->data->swap(0, $this->data->getSize() - 1);
+        //$this->data->swap(0, $this->data->getSize() - 1);
         $this->data->removeLast();
         $this->siftDown(0);
         return $ret;
@@ -85,7 +85,7 @@ class MaxHeap
             if ($this->data->get($k) >= $this->data->get($j)) {
                 break;
             }
-            $this->data->swap($k, $j);
+           // $this->data->swap($k, $j);
             $k = $j;
         }
     }

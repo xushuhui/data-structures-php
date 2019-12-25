@@ -1,4 +1,5 @@
 <?php
+namespace App\Set;
 /**
  * Copyright (c) 2019 - xushuhui
  * Author: xushuhui

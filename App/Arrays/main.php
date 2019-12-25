@@ -1,4 +1,5 @@
 <?php
+namespace App\Arrays;
 /**
  * Copyright (c) 2019 - xushuhui
  * Author: xushuhui
@@ -6,7 +7,7 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-include_once "Arrays.php";
+
 $arr = new Arrays(3);
 echo $arr;
 for ($i = 0; $i < 15; $i++) {

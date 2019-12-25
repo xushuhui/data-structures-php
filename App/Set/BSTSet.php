@@ -1,4 +1,8 @@
 <?php
+namespace App\Set;
+
+use App\BinarySearchTree\BST;
+
 /**
  * Copyright (c) 2019 - xushuhui
  * Author: xushuhui
@@ -6,8 +10,7 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-include_once "BST.php";
-include_once "Set.php";
+
 class BSTSet implements Set
 {
     private $bst;

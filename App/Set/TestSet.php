@@ -6,8 +6,7 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-include_once "BSTSet.php";
-include_once "LinkedListSet.php";
+namespace App\Set;
 class TestSet
 {
     public static function test($set, $filename)
