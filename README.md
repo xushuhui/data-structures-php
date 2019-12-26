@@ -1,27 +1,29 @@
 ## php版数据结构
 
-- [x] 数组 [（Arrays）](https://github.com/xushuhui/Data-Structures/tree/master/Arrays)
-- [x] 栈 [（Stack）](https://github.com/xushuhui/Data-Structures/tree/master/Stack)
-    - [x] 数组栈 [（Array Stack）](https://github.com/xushuhui/Data-Structures/tree/master/Stack/ArrayStack.php)
-    - [x] 链表栈 [（Linked List Stack）](https://github.com/xushuhui/Data-Structures/tree/master/Stack/LinkedListStack.php)
-- [x] 队列 [（Queue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue)
-    - [x] 数组队列 [（Array Queue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue/ArrayQueue.php)
-    - [x] 循环队列 [（Loop Queue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue/LoopQueue.php)
-    - [x] 链表队列 [（Linked List Queue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue/LinkedListQueue.php)
-    - [x] 优先队列 [（PriorityQueue）](https://github.com/xushuhui/Data-Structures/tree/master/Queue/PriorityQueue.php)
-- [x] 链表 [（Linked List）](https://github.com/xushuhui/Data-Structures/tree/master/LinkedList)
-- [x] 二分搜索树 [（Binary Search Tree）](https://github.com/xushuhui/Data-Structures/tree/master/BinarySearchTree)
-- [x] 集合 [（Set）](https://github.com/xushuhui/Data-Structures/tree/master/Set)
-    - [x] 链表集合 [（Linked List Set）](https://github.com/xushuhui/Data-Structures/tree/master/Set/LinkedListSet.php)
-    - [x] 二分搜索树集合 [（BST Set）](https://github.com/xushuhui/Data-Structures/tree/master/Set/BSTSet.php)
-- [x] 映射 [（Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map)
-    - [x] 链表映射 [（Linked List Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map/LinkedListMap.php)
-    - [x] 二分搜索树映射 [（BST Map）](https://github.com/xushuhui/Data-Structures/tree/master/Map/BSTMap.php)
-- [x] 堆 [（Heap）](https://github.com/xushuhui/Data-Structures/tree/master/Heap)
-    - [x] 最大堆 [（Max Heap）](https://github.com/xushuhui/Data-Structures/tree/master/Map/MaxHeap.php)
-- [x] 线段树 [（SegmentTree）](https://github.com/xushuhui/Data-Structures/tree/master/SegmentTree)
-- [x] 字典树 [（Trie）](https://github.com/xushuhui/Data-Structures/tree/master/Trie)
-- [ ] 并查集 [（UnionFind）](https://github.com/xushuhui/Data-Structures/tree/master/UnionFind)
-- [ ] 平衡二叉树 [（AVLTree）](https://github.com/xushuhui/Data-Structures/tree/master/AVLTree)
-- [ ] 红黑树 [（RedBlackTree）](https://github.com/xushuhui/Data-Structures/tree/master/RedBlackTree)
-- [ ] 哈希表 [（HashTable）](https://github.com/xushuhui/Data-Structures/tree/master/HashTable)
+|名称|Go 版本|PHP 版本|
+|-|-|-|
+|数组|[array](https://github.com/xushuhui/data-structures/tree/master/array)|[array](https://github.com/xushuhui/data-structures-php/tree/master/App/Arrays)|
+|链表|[linked list](https://github.com/xushuhui/data-structures/tree/master/linked_list)|[linked list](https://github.com/xushuhui/data-structures-php/tree/master/App/LinkedList)|
+|队列|[queue](https://github.com/xushuhui/data-structures/tree/master/queue)|[queue](https://github.com/xushuhui/data-structures-php/tree/master/App/Queue)|
+|数组队列|[array queue](https://github.com/xushuhui/data-structures/tree/master/queue)|[array queue](https://github.com/xushuhui/data-structures-php/tree/master/App/Queue)|
+|循环队列|[loop queue](https://github.com/xushuhui/data-structures/tree/master/queue)|[loop queue](https://github.com/xushuhui/data-structures-php/tree/master/App/Queue)|
+|链表队列|[linked list queue](https://github.com/xushuhui/data-structures/tree/master/queue)|[linked list queue](https://github.com/xushuhui/data-structures-php/tree/master/App/Queue)|
+|优先队列|[priority queue](https://github.com/xushuhui/data-structures/tree/master/heap)|[priority queue](https://github.com/xushuhui/data-structures-php/tree/master/App/Queue)|
+|栈|[stack](https://github.com/xushuhui/data-structures/tree/master/stack)|[stack](https://github.com/xushuhui/data-structures-php/tree/master/App/Stack)|
+|数组栈|[array stack](https://github.com/xushuhui/data-structures/tree/master/stack)|[array stack](https://github.com/xushuhui/data-structures-php/tree/master/App/App/Stack)|
+|链表栈|[linked list stack](https://github.com/xushuhui/data-structures/tree/master/stack)|[linked list stack](https://github.com/xushuhui/data-structures-php/tree/master/App/App/Stack)|
+|集合|[set](https://github.com/xushuhui/data-structures/tree/master/set)|[set](https://github.com/xushuhui/data-structures-php/tree/master/App/Set)|
+|链表集合|[linked list set](https://github.com/xushuhui/data-structures/tree/master/set)|[linked list set](https://github.com/xushuhui/data-structures-php/tree/master/App/Set)|
+|二分搜索树集合|[BST Set](https://github.com/xushuhui/data-structures/tree/master/set)|[BST Set](https://github.com/xushuhui/data-structures-php/tree/master/App/Set)|
+|映射|[map](https://github.com/xushuhui/data-structures/tree/master/maps)|[map](https://github.com/xushuhui/data-structures-php/tree/master/App/Map)|
+|链表映射|[linked list map](https://github.com/xushuhui/data-structures/tree/master/maps)|[linked list map](https://github.com/xushuhui/data-structures-php/tree/master/App/Map)|
+|二分搜索树映射|[BST map](https://github.com/xushuhui/data-structures/tree/master/maps)|[BST map](https://github.com/xushuhui/data-structures-php/tree/master/App/Map)|
+|二叉搜索树|[binary_search_tree](https://github.com/xushuhui/data-structures/tree/master/binary_search_tree)|[binary_search_tree](https://github.com/xushuhui/data-structures-php/tree/master/App/BinarySearchTree)|
+|线段树|[segment_tree](https://github.com/xushuhui/data-structures/tree/master/binary_search_tree)|[segment_tree](https://github.com/xushuhui/data-structures-php/tree/master/App/SegmentTree)|
+|字典树|[trie](https://github.com/xushuhui/data-structures/tree/master/binary_search_tree)|[trie](https://github.com/xushuhui/data-structures-php/tree/master/App/Trie)|
+|平衡二叉树|[AVLTree](https://github.com/xushuhui/data-structures/tree/master/binary_search_tree)|[AVLTree](https://github.com/xushuhui/data-structures-php/tree/master/App/AVLTree)|
+|红黑树|[red_black_tree](https://github.com/xushuhui/data-structures/tree/master/red_black_tree)|[red_black_tree](https://github.com/xushuhui/data-structures-php/tree/master/App/RedBlackTree)|
+|并查集|[union_find](https://github.com/xushuhui/data-structures/tree/master/union_find)|[union_find](https://github.com/xushuhui/data-structures-php/tree/master/App/UnionFind)|
+|哈希表|[hash_table](https://github.com/xushuhui/data-structures/tree/master/hashtable)|[hash_table](https://github.com/xushuhui/data-structures-php/tree/master/App/HashTable)|
+|堆|[heap](https://github.com/xushuhui/data-structures/tree/master/heap)|[heap](https://github.com/xushuhui/data-structures-php/tree/master/App/Heap)|
+|最大堆|[max heap](https://github.com/xushuhui/data-structures/tree/master/heap)|[max heap](https://github.com/xushuhui/data-structures-php/tree/master/App/Map/MaxHeap.php)|

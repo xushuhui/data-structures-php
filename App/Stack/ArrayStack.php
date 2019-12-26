@@ -6,14 +6,16 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-include "Stack.php";
-include "Array.php";
+namespace App\Stack;
+
+use App\Arrays\Arrays;
+
 class ArrayStack implements Stack
 {
     private $array;
     public function __construct(int $capacity = 10)
     {
-        $this->array = new arrays($capacity);
+        $this->array = new Arrays($capacity);
     }
     public function getSize()
     {

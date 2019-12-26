@@ -6,6 +6,9 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
+namespace App\Stack;
+
+use App\LinkedList\LinkedList;
 
 class LinkedListStack implements Stack
 {

@@ -1,4 +1,5 @@
 <?php
+namespace App\Trie;
 /**
  * Copyright (c) 2019 - xushuhui
  * Author: xushuhui
@@ -16,7 +17,7 @@ class TrieNode
     {
         $this->isWord = $isWord;
     }
-    //TODO TreeMap
+   
 }
 class Trie
 {

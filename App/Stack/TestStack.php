@@ -6,8 +6,7 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-include_once "ArrayStack.php";
-include_once "LinkedListStack.php";
+namespace App\Stack;
 class TestStack
 {
     public static function test($stack, $count)

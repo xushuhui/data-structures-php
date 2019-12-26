@@ -6,6 +6,7 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
+namespace App\Stack;
 interface Stack
 {
     public function getSize();
