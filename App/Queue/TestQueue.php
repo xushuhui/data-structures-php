@@ -9,7 +9,7 @@
 namespace App\Queue;
 class TestQueue
 {
-    public static function test($queue, $count)
+    public static function test(Queue $queue, $count)
     {
         $startTime = microtime(true);
         for ($i = 0; $i < $count; $i++) {

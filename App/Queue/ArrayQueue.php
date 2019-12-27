@@ -33,9 +33,9 @@ class ArrayQueue implements Queue
     public function dequeue()
     {
         if ($this->isEmpty()) {
-            throw new \Exception . ("Queue is empty");
+            throw new \Exception("Queue is empty");
         }
-        return $this->array->removeFirst();
+        $this->array->removeFirst();
     }
     public function getFront()
     {

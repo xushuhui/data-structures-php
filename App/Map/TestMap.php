@@ -2,7 +2,7 @@
 namespace App\Map;
 class TestMap
 {
-    public static function test($map, $filename)
+    public static function test(Map $map, $filename)
     {
         $startTime = microtime(true);
         $str = file_get_contents($filename);

@@ -1,5 +1,5 @@
 <?php
-namespace App\BinarySearchTree;
+include "../vendor/autoload.php";
 /**
  * Copyright (c) 2019 - xushuhui
  * Author: xushuhui
@@ -9,7 +9,7 @@ namespace App\BinarySearchTree;
  */
 
 
-$BST = new BST();
+$BST = new \App\BinarySearchTree\BST();
 $nums = [5, 3, 7, 4, 2, 6, 8];
 foreach ($nums as $v) {
     $BST->add($v);

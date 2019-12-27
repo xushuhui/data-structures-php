@@ -45,7 +45,7 @@ class LoopQueue implements Queue
     public function dequeue()
     {
         if ($this->isEmpty()) {
-            throw new \Exception . ("Queue is empty");
+            throw new \Exception("Queue is empty");
         }
         $ret = $this->data[$this->front];
         $this->data[$this->front] = null;
@@ -60,7 +60,7 @@ class LoopQueue implements Queue
     public function getFront()
     {
         if ($this->isEmpty()) {
-            throw new \Exception . ("Queue is empty");
+            throw new \Exception("Queue is empty");
         }
         return $this->data[$this->front];
     }

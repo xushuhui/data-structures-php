@@ -54,7 +54,7 @@ class LinkedListQueue implements Queue
     public function dequeue()
     {
         if ($this->isEmpty()) {
-            throw new \Exception . ("Queue is empty");
+            throw new \Exception("Queue is empty");
         }
         $retNode = $this->head;
         $this->head = $this->head->next;
@@ -68,7 +68,7 @@ class LinkedListQueue implements Queue
     public function getFront()
     {
         if ($this->isEmpty()) {
-            throw new \Exception . ("Queue is empty");
+            throw new \Exception("Queue is empty");
         }
         return $this->head->e;
     }
