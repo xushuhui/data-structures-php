@@ -8,7 +8,7 @@ class MaxHeap
     private $data;
     public function __construct($capacity = 10, $arr = [])
     {
-        $this->data = (new Arrays($capacity, $arr));
+        $this->data = (new Arrays($capacity));
         if ($arr) {
             for ($i = $this->parent(count($arr)); $i >= 0; $i--) {
                 $this->siftDown($i);

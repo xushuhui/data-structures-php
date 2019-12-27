@@ -7,7 +7,6 @@ namespace App\Queue;
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-include_once "Queue.php";
 class Node
 {
     public $e;
