@@ -30,7 +30,7 @@ class TestHeap
 
         for ($i = 1; $i < $count; $i++) {
             if ($arr[$i - 1] < $arr[$i]) {
-                throw new \Exception . ("Error");
+                throw new \Exception("Error");
             }
         }
         echo ("Test MaxHeap completed.");

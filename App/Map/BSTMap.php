@@ -92,7 +92,7 @@ class BSTMap implements Map
     {
         $node = $this->getNode($this->root, $key);
         if ($node == null) {
-            throw new \Exception . ("$key not exist");
+            throw new \Exception("$key not exist");
         }
         $node->value = $value;
     }
@@ -100,7 +100,7 @@ class BSTMap implements Map
     public function minimum()
     {
         if ($this->size == 0) {
-            throw new \Exception . ("BST is empty");
+            throw new \Exception("BST is empty");
         }
         $minNode = $this->minimumNode($this->root);
         return $minNode->e;

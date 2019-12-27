@@ -3,8 +3,8 @@
 namespace App\BinarySearchTree;
 
 /**
- * Copyright (c) 2019 - xushuhui
- * Author: xushuhui
+ * Copyright (c) 2019 - XuShuHui
+ * Author: XuShuHui
  * 微信公众号: 互联网工程师
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
@@ -14,6 +14,7 @@ class Node
     public $left;
     public $right;
     public $e;
+
     public function __construct($e)
     {
         $this->e = $e;
@@ -21,16 +22,19 @@ class Node
         $this->right = null;
     }
 }
+
 class BST
 {
     private $root;
     private $size;
     public static $res;
+
     public function __construct()
     {
         $this->root = null;
         $this->size = 0;
     }
+
     public function getSize()
     {
         return $this->size;
@@ -40,6 +44,7 @@ class BST
     {
         return $this->size == 0;
     }
+
     // 向二分搜索树中添加新的元素e
     public function add($e)
     {
@@ -60,11 +65,13 @@ class BST
         }
         return $node;
     }
+
     // 看二分搜索树中是否包含元素e
     public function contains($e)
     {
         return $this->containsNode($this->root, $e);
     }
+
     // 看以node为根的二分搜索树中是否包含元素e, 递归算法
     private function containsNode($node, $e)
     {
@@ -79,11 +86,13 @@ class BST
             return true;
         }
     }
+
     // 二分搜索树的前序遍历
     public function preOrder()
     {
         $this->preOrderNode($this->root);
     }
+
     // 前序遍历以node为根的二分搜索树, 递归算法
     private function preOrderNode($node)
     {
@@ -94,6 +103,7 @@ class BST
         $this->preOrderNode($node->left);
         $this->preOrderNode($node->right);
     }
+
     // 二分搜索树的非递归前序遍历
     public function preOrderNR()
     {
@@ -114,11 +124,13 @@ class BST
             }
         }
     }
+
     // 二分搜索树的中序遍历
     public function inOrder()
     {
         $this->inOrderNode($this->root);
     }
+
     // 中序遍历以node为根的二分搜索树, 递归算法
     private function inOrderNode($node)
     {
@@ -129,6 +141,7 @@ class BST
         echo $node->e;
         $this->inOrderNode($node->right);
     }
+
     // 二分搜索树的后序遍历
     public function postOrder()
     {
@@ -145,6 +158,7 @@ class BST
         $this->postOrderNode($node->right);
         echo $node->e;
     }
+
     // 二分搜索树的层序遍历
     public function levelOrder()
     {
@@ -164,6 +178,7 @@ class BST
             }
         }
     }
+
     // 寻找二分搜索树的最小元素
     public function minimum()
     {
@@ -173,6 +188,7 @@ class BST
         $minNode = $this->minimumNode($this->root);
         return $minNode->e;
     }
+
     // 返回以node为根的二分搜索树的最小值所在的节点
     private function minimumNode($node)
     {
@@ -181,6 +197,7 @@ class BST
         }
         return $this->minimumNode($node->left);
     }
+
     // 寻找二分搜索树的最大元素
     public function maximum()
     {
@@ -190,6 +207,7 @@ class BST
         $maxNode = $this->maximumNode($this->root);
         return $maxNode->e;
     }
+
     // 返回以node为根的二分搜索树的最大值所在的节点
     private function maximumNode($node)
     {
@@ -198,6 +216,7 @@ class BST
         }
         return $this->maximumNode($node->right);
     }
+
     // 从二分搜索树中删除最小值所在节点, 返回最小值
     public function removeMin()
     {
@@ -218,6 +237,7 @@ class BST
         $node->left = $this->removeMinNode($node->left);
         return $node;
     }
+
     // 从二分搜索树中删除最大值所在节点
     public function removeMax()
     {
@@ -238,6 +258,7 @@ class BST
         $node->right = $this->removeMaxNode($node->right);
         return $node;
     }
+
     // 从二分搜索树中删除元素为e的节点
     public function remove($e)
     {
@@ -282,11 +303,13 @@ class BST
             return $successor;
         }
     }
+
     public function __toString()
     {
-        $this->generateBSTString($this->root, 0, static::$res);
+        $this->generateBSTString($this->root, 0);
         return static::$res;
     }
+
     // 生成以node为根节点，深度为depth的描述二叉树的字符串
     private function generateBSTString($node, int $depth)
     {
@@ -298,12 +321,13 @@ class BST
         $this->generateBSTString($node->left, $depth + 1);
         $this->generateBSTString($node->right, $depth + 1);
     }
+
     private function generateDepthString($depth)
     {
-        $restr = '';
+        $str = '';
         for ($i = 0; $i < $depth; $i++) {
-            $restr .= '--';
+            $str .= '--';
         }
-        return $restr;
+        return $str;
     }
 }

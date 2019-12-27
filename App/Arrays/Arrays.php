@@ -1,8 +1,8 @@
 <?php
 namespace App\Arrays;
 /**
- * Copyright (c) 2019 - xushuhui
- * Author: xushuhui
+ * Copyright (c) 2019 - XuShuHui
+ * Author: XuShuHui
  * 微信公众号: 互联网工程师
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
@@ -49,6 +49,7 @@ class Arrays
         $this->data[$index] = $e;
         $this->size++;
     }
+
     //向所有元素后添加一个新元素 O(1)
     public function addLast($e)
     {

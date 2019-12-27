@@ -7,20 +7,7 @@ namespace App\LinkedList;
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-class Node
-{
-    public $e;
-    public $next;
-    public function __construct($e = null, $next = null)
-    {
-        $this->e = $e;
-        $this->next = $next;
-    }
-    public function __toString()
-    {
-        return (string) $this->e;
-    }
-}
+
 class LinkedList
 {
     private $size;
@@ -45,7 +32,7 @@ class LinkedList
     public function add($index, $e)
     {
         if ($index < 0 || $index > $this->size) {
-            throw new \Exception . ("index is illegal");
+            throw new \Exception("index is illegal");
         }
         $prev = $this->dummyHead;
         for ($i = 0; $i < $index; $i++) {
@@ -69,7 +56,7 @@ class LinkedList
     public function get($index)
     {
         if ($index < 0 || $index > $this->size) {
-            throw new \Exception . ("index is illegal");
+            throw new \Exception("index is illegal");
         }
         $cur = $this->dummyHead->next;
         for ($i = 0; $i < $index; $i++) {
@@ -92,7 +79,7 @@ class LinkedList
     public function set($index, $e)
     {
         if ($index < 0 || $index > $this->size) {
-            throw new \Exception . ("index is illegal");
+            throw new \Exception("index is illegal");
         }
         $cur = $this->dummyHead->next;
         for ($i = 0; $i < $index; $i++) {
@@ -118,7 +105,7 @@ class LinkedList
     public function remove($index)
     {
         if ($index < 0 || $index > $this->size) {
-            throw new \Exception . ("index is illegal");
+            throw new \Exception("index is illegal");
         }
         $prev = $this->dummyHead;
         for ($i = 0; $i < $index; $i++) {
@@ -158,5 +145,20 @@ class LinkedList
         // }
         $res .= "NULL\n";
         return $res;
+    }
+
+}
+class Node
+{
+    public $e;
+    public $next;
+    public function __construct($e = null,Node $next = null)
+    {
+        $this->e = $e;
+        $this->next = $next;
+    }
+    public function __toString()
+    {
+        return (string) $this->e;
     }
 }
