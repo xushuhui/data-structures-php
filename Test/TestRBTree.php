@@ -6,6 +6,3 @@
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-class TestRBTree{
-
-}
