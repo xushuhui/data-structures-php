@@ -1,0 +1,5 @@
+<?php
+class UnionFind5
+{
+
+}
