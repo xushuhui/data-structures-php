@@ -8,7 +8,7 @@ namespace App\Map;
  * 博客: https://www.phpst.cn
  */
 
-class Node
+class LinkedListMapNode
 {
     public $key;
     public $value;
@@ -30,7 +30,7 @@ class LinkedListMap implements Map
     private $dummyHead;
     public function __construct()
     {
-        $this->dummyHead = new Node();
+        $this->dummyHead = new LinkedListMapNode();
         $this->size = 0;
     }
     public function getSize()

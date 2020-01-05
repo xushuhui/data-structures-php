@@ -7,7 +7,20 @@ namespace App\LinkedList;
  * Email: xushuhui@qq.com
  * 博客: https://www.phpst.cn
  */
-
+class LinkedListNode
+{
+    public $e;
+    public $next;
+    public function __construct($e = null, LinkedListNode $next = null)
+    {
+        $this->e = $e;
+        $this->next = $next;
+    }
+    public function __toString()
+    {
+        return (string) $this->e;
+    }
+}
 class LinkedList
 {
     private $size;

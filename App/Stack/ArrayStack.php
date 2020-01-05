@@ -35,7 +35,7 @@ class ArrayStack implements Stack
     }
     public function pop()
     {
-        return  $this->array->removeLast();
+        $this->array->removeLast();
     }
     public function peek()
     {
