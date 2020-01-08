@@ -27,7 +27,7 @@ class MaxHeap
         return $this->data->isEmpty();
     }
     // 返回完全二叉树的数组表示中，一个索引所表示的元素的父亲节点的索引
-    public function parent($index)
+    public function parent($index): int
     {
         if ($index == 0) {
             throw new \Exception("index error");
